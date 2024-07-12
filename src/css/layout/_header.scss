@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  height: 70px;
+  @include flex-center;
+  .wrapper {
+    @include flex-between;
+  }
+}
+
+.titleContainer {
+  @include flex-center;
+}
+
+.headerTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 8px;
+  color: $color-primary;
+}
+
+.btn {
+  height: 38px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  margin-left: 12px;
+}
+
+.btnPlus {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}

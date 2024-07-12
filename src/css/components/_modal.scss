@@ -1,0 +1,31 @@
+.offcanvas {
+  max-width: 312px;
+}
+
+.offcanvas-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.offcanvas-footer {
+  padding: 0 20px 20px;
+}
+
+.btn-light {
+  color: $color-primary;
+  transition: 0.3s;
+  border: none;
+  &:hover {
+    color: $color-primary;
+    background: $color-hover;
+    border: none;
+  }
+}
+
+.add-group {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
