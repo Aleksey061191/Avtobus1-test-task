@@ -2,6 +2,11 @@
   max-width: 312px;
 }
 
+.offcanvas-header {
+  min-height: 70px;
+  border-bottom: 1px solid $color-opacity10;
+}
+
 .offcanvas-title {
   font-weight: 700;
   font-size: 18px;
@@ -22,10 +27,18 @@
   }
 }
 
-.add-group {
+.addGroup {
   display: none;
 }
 
 .visible {
   display: block;
+}
+
+.btn-close {
+  transition: 0.3s;
+  &:hover {
+    background-color: $color-opacity5;
+    opacity: 1;
+  }
 }

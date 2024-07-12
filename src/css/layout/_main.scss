@@ -1,4 +1,5 @@
 .main {
+  background: $color-opacity5;
   height: calc(100vh - 70px);
   @include flex-center;
 }

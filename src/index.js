@@ -1,28 +1,14 @@
 import '../src/css/style.scss';
+import { modalBtnsListener } from './js/addGroup';
+import { collapsedListener } from './js/collapsedGroups';
+import { headerBtnsListener } from './js/handelClick';
+import { renderContacts } from './js/renderContacts';
 
-const handelClick = (e) => {
-  const title = document.querySelector('.offcanvas-title');
-  const btnAdd = document.querySelector('.add-group');
-
-  const idBtn = e.target.id;
-  if (idBtn === 'add') {
-    title.innerHTML = 'Добавление контакта';
-    btnAdd.classList.remove('visible');
-  } else {
-    title.innerHTML = 'Группы контактов';
-    btnAdd.classList.add('visible');
-  }
-};
-
-async function render() {
-  const main = document.querySelector('.mainWrapper');
-  const content = document.createElement('h2');
-  content.classList.add('content');
-  content.innerHTML = 'Список контактов пуст';
-  main.appendChild(content);
-
-  const btns = document.querySelector('.btns');
-  btns.addEventListener('click', handelClick);
+function render() {
+  renderContacts();
+  headerBtnsListener();
+  modalBtnsListener();
+  collapsedListener();
 }
 
 render();

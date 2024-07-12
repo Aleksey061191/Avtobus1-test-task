@@ -1,0 +1,32 @@
+.card {
+  width: 100%;
+  padding: 0 16px;
+}
+
+.headerCollapse {
+  width: 100%;
+  height: 70px;
+  @include flex-between;
+  &.collapsed .titleCollapse {
+    color: $color-darck;
+  }
+  &.collapsed .arrow {
+    transform: rotate(180deg);
+  }
+}
+
+.titleCollapse {
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-primary;
+}
+
+.arrow {
+  width: 24px;
+  transition: 0.3s;
+}
+
+.collapseItem {
+  height: 70px;
+  border-top: 1px solid $color-opacity10;
+}

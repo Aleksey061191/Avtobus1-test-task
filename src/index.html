@@ -47,7 +47,27 @@
       </div>
     </header>
 
-    <main class="main"><div class="wrapper mainWrapper"></div></main>
+    <main class="main">
+      <div class="wrapper mainWrapper">
+        <div class="card">
+          <div
+            class="headerCollapse"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse1"
+            aria-expanded="true"
+            aria-controls="collapse1"
+          >
+            <h2 class="titleCollapse">Kontakts</h2>
+            <img class="arrow" src="./images/arrow.svg" alt="img" />
+          </div>
+
+          <div class="collapse show" id="collapse1">
+            <div class="collapseItem"></div>
+            <div class="collapseItem"></div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <div
       class="offcanvas offcanvas-start"
@@ -67,10 +87,14 @@
       </div>
       <div class="offcanvas-body"></div>
       <div
-        class="offcanvas-footer d-grid gap-2 d-md-flex justify-content-md-end"
+        class="modalBtn offcanvas-footer d-grid gap-2 d-md-flex justify-content-md-end"
       >
-        <button class="btn add-group btn-light" type="button">Добавить</button>
-        <button class="btn btn-primary" type="button">Сохранить</button>
+        <button class="btn addGroup btn-light" id="add" type="button">
+          Добавить
+        </button>
+        <button class="btn btn-primary" id="save" type="button">
+          Сохранить
+        </button>
       </div>
     </div>
   </body>
