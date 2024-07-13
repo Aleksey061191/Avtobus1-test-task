@@ -1,16 +1,26 @@
 .collapseItem {
   @include flex-between;
+  @include media-tablet {
+    flex-direction: column;
+    padding: 10px 0;
+  }
 }
 
 .fio {
   font-size: 18px;
   font-weight: 400;
   color: $color-opacity50;
+  @include media-mobilesmall {
+    font-size: 14px;
+  }
 }
 
 .phone {
   font-size: 18px;
   font-weight: 400;
+  @include media-mobilesmall {
+    font-size: 14px;
+  }
 }
 
 .controlItems {
@@ -18,7 +28,7 @@
   gap: 24px;
 }
 
-.btns {
+.controlBtns {
   @include flex-between;
   gap: 8px;
 }

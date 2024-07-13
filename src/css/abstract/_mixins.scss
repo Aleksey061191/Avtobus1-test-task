@@ -9,3 +9,21 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@mixin media-tablet {
+  @media (max-width: 630px) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin media-mobilesmall {
+  @media (max-width: 460px) {
+    @content;
+  }
+}

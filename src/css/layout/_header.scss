@@ -6,6 +6,15 @@
   .wrapper {
     @include flex-between;
   }
+  @include media-mobilesmall {
+    height: 100px;
+    .btns {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 6px;
+    }
+  }
 }
 
 .titleContainer {
@@ -17,6 +26,12 @@
   font-weight: 700;
   margin-left: 8px;
   color: $color-primary;
+  @include media-mobile {
+    font-size: 16px;
+  }
+  @include media-mobilesmall {
+    font-size: 12px;
+  }
 }
 
 .btn {
@@ -25,10 +40,23 @@
   font-weight: 700;
   line-height: 18px;
   margin-left: 12px;
+  @include media-mobile {
+    font-size: 12px;
+  }
+  @include media-mobilesmall {
+    margin-left: 4px;
+  }
 }
 
 .btnPlus {
   margin-left: 10px;
   font-size: 20px;
   font-weight: 500;
+  @include media-mobile {
+    font-size: 18px;
+  }
+  @include media-mobilesmall {
+    font-size: 16px;
+    margin-left: 4px;
+  }
 }

@@ -3,4 +3,11 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
+  height: 100%;
+  @include flex-center;
+}
+
+.text {
+  height: calc(100vh - 150px);
+  @include flex-center;
 }

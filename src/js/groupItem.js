@@ -1,14 +1,14 @@
 import deleteIcon from '../../src/images/delete-forever.svg';
+import { createInput } from './createInput';
+import { getLocal } from './local';
+import { renderContacts } from './renderContacts';
 
-export const groupItem = (title, isInput = false) => {
-  const groupList = document.querySelector('.offcanvas-body');
+export const groupItem = (title, i, isInput = false) => {
   const newGroup = document.createElement('div');
   newGroup.classList.add('group');
   let groupTitle;
   if (isInput) {
-    groupTitle = document.createElement('input');
-    groupTitle.classList.add('groupTitle', 'inputTitle');
-    groupTitle.placeholder = 'Введите название';
+    groupTitle = createInput('Введите название', 'groupName');
   } else {
     groupTitle = document.createElement('div');
     groupTitle.classList.add('groupTitle');
@@ -22,9 +22,14 @@ export const groupItem = (title, isInput = false) => {
   deleteButton.classList.add('controlBtn', 'delete');
   deleteButton.append(icon);
   deleteButton.onclick = () => {
-    groupList.removeChild(newGroup);
+    const groupList = getLocal();
+    newGroup.parentElement.removeChild(newGroup);
+    groupList.splice(i, 1);
+    localStorage.setItem('groupList', JSON.stringify(groupList));
+    renderContacts();
   };
 
   newGroup.append(groupTitle, deleteButton);
-  groupList.appendChild(newGroup);
+
+  return newGroup;
 };

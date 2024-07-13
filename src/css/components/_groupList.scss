@@ -1,6 +1,5 @@
 .group {
   @include flex-between;
-  height: 38px;
   margin-bottom: 10px;
 }
 
@@ -20,4 +19,15 @@
   &:focus-visible {
     outline: none;
   }
+}
+
+.form {
+  @include flex-between;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.select {
+  opacity: 0.7;
+  padding-left: 8px;
 }

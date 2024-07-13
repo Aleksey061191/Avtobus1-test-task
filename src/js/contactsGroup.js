@@ -2,7 +2,6 @@ import arrowIcon from '../../src/images/arrow.svg';
 import { contactsItem } from './contactsItem';
 
 export const contactsGroup = (item, i) => {
-  const mainWrapper = document.querySelector('.mainWrapper');
   const card = document.createElement('div');
   card.classList.add('card');
   const headerCard = document.createElement('div');
@@ -24,11 +23,12 @@ export const contactsGroup = (item, i) => {
   body.classList.add('collapse', 'show');
   body.id = `collapse${i}`;
 
-  item.contacts.map((contact) => {
-    body.append(contactsItem(contact, body));
+  item.contacts.map((contact, index) => {
+    body.append(contactsItem(contact, i, index));
   });
 
   headerCard.append(title, arrow);
   card.append(headerCard, body);
-  mainWrapper.append(card);
+
+  return card;
 };
