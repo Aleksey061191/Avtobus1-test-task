@@ -1,6 +1,7 @@
 import { groupItem } from './groupItem';
 import { getLocal, saveLocal } from './local';
 import { renderContacts } from './renderContacts';
+import { saveForm } from './saveForm';
 
 export const add = (e) => {
   e.preventDefault();
@@ -23,6 +24,9 @@ export const add = (e) => {
       saveLocal(groupList);
       renderContacts();
     }
+  }
+  if (idBtn === 'save' && !saveClass) {
+    saveForm();
   }
 };
 

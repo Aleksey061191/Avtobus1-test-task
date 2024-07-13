@@ -1,6 +1,6 @@
 import deleteIcon from '../../src/images/delete-forever.svg';
 import { createInput } from './createInput';
-import { getLocal } from './local';
+import { getLocal, saveLocal } from './local';
 import { renderContacts } from './renderContacts';
 
 export const groupItem = (title, i, isInput = false) => {
@@ -25,7 +25,7 @@ export const groupItem = (title, i, isInput = false) => {
     const groupList = getLocal();
     newGroup.parentElement.removeChild(newGroup);
     groupList.splice(i, 1);
-    localStorage.setItem('groupList', JSON.stringify(groupList));
+    saveLocal(groupList);
     renderContacts();
   };
 

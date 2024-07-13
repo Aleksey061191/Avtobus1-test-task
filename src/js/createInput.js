@@ -16,8 +16,9 @@ export const createInput = (placeholder, id, value = '') => {
   return input;
 };
 
-export const createSelectInput = (value = '') => {
+export const createSelectInput = (value = '', id = '') => {
   const selectInput = document.createElement('select');
+  selectInput.id = id;
   selectInput.required = true;
   const option = document.createElement('option');
   option.value = '';
