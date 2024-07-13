@@ -1,8 +1,7 @@
-import deletIcon from '../../src/images/delete-forever.svg';
-
-const groupList = document.querySelector('.offcanvas-body');
+import deleteIcon from '../../src/images/delete-forever.svg';
 
 export const groupItem = (title, isInput = false) => {
+  const groupList = document.querySelector('.offcanvas-body');
   const newGroup = document.createElement('div');
   newGroup.classList.add('group');
   let groupTitle;
@@ -18,9 +17,9 @@ export const groupItem = (title, isInput = false) => {
 
   const deleteButton = document.createElement('button');
   const icon = document.createElement('img');
-  icon.src = deletIcon;
+  icon.src = deleteIcon;
   icon.classList.add('icon');
-  deleteButton.classList.add('delete');
+  deleteButton.classList.add('controlBtn', 'delete');
   deleteButton.append(icon);
   deleteButton.onclick = () => {
     groupList.removeChild(newGroup);

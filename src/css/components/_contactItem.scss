@@ -1,0 +1,24 @@
+.collapseItem {
+  @include flex-between;
+}
+
+.fio {
+  font-size: 18px;
+  font-weight: 400;
+  color: $color-opacity50;
+}
+
+.phone {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.controlItems {
+  @include flex-center;
+  gap: 24px;
+}
+
+.btns {
+  @include flex-between;
+  gap: 8px;
+}
